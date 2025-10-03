@@ -1,0 +1,22 @@
+footer {
+  border-top: 1px solid var(--border);
+  padding: 1.4rem 2rem;
+  color: var(--muted);
+}
+footer .footer-flex {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+footer .footer-nav {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+footer .footer-nav a {
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=footer.css.map */

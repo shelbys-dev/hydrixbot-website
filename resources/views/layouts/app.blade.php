@@ -24,9 +24,11 @@
     <link rel="manifest" href="/manifest.json">
 
     <link rel="stylesheet" href="{{ asset('assets/css/nav.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/cookie.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/footer.css') }}">
     @if (Route::is('home'))
         <link rel="stylesheet" href="{{ asset('assets/css/index.css') }}">
-    @elseif (Route::is('docs'))
+    @elseif (Route::is('docs', 'docs.show'))
         <link rel="stylesheet" href="{{ asset('assets/css/docs.css') }}">
     @elseif (Route::is('tos') || Route::is('privacy'))
         <link rel="stylesheet" href="{{ asset('assets/css/terms.css') }}">
@@ -46,7 +48,14 @@
     <main>@yield('content')</main>
 
     <footer>
-        <small>© {{ date('Y') }} ShelbyDev — Hydrix Bot</small>
+        <div class="footer-flex">
+            <small>© {{ date('Y') }} ShelbyDev — Hydrix Bot. Tous droits réservés.</small>
+            <nav aria-label="Liens légaux" class="footer-nav">
+                <a href="{{ route('tos') }}" class="muted">Conditions d'utilisation</a>
+                <a href="{{ route('privacy') }}" class="muted">Politique de confidentialité</a>
+                <a href="#" class="muted">Contact</a>
+            </nav>
+        </div>
     </footer>
 
     <!-- Cookie consent minimal -->

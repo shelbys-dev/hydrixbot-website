@@ -24,9 +24,11 @@
     <link rel="manifest" href="/manifest.json">
 
     <link rel="stylesheet" href="<?php echo e(asset('assets/css/nav.css')); ?>">
+    <link rel="stylesheet" href="<?php echo e(asset('assets/css/cookie.css')); ?>">
+    <link rel="stylesheet" href="<?php echo e(asset('assets/css/footer.css')); ?>">
     <?php if(Route::is('home')): ?>
         <link rel="stylesheet" href="<?php echo e(asset('assets/css/index.css')); ?>">
-    <?php elseif(Route::is('docs')): ?>
+    <?php elseif(Route::is('docs', 'docs.show')): ?>
         <link rel="stylesheet" href="<?php echo e(asset('assets/css/docs.css')); ?>">
     <?php elseif(Route::is('tos') || Route::is('privacy')): ?>
         <link rel="stylesheet" href="<?php echo e(asset('assets/css/terms.css')); ?>">
@@ -46,7 +48,14 @@
     <main><?php echo $__env->yieldContent('content'); ?></main>
 
     <footer>
-        <small>© <?php echo e(date('Y')); ?> ShelbyDev — Hydrix Bot</small>
+        <div class="footer-flex">
+            <small>© <?php echo e(date('Y')); ?> ShelbyDev — Hydrix Bot. Tous droits réservés.</small>
+            <nav aria-label="Liens légaux" class="footer-nav">
+                <a href="<?php echo e(route('tos')); ?>" class="muted">Conditions d'utilisation</a>
+                <a href="<?php echo e(route('privacy')); ?>" class="muted">Politique de confidentialité</a>
+                <a href="#" class="muted">Contact</a>
+            </nav>
+        </div>
     </footer>
 
     <!-- Cookie consent minimal -->

@@ -1,6 +1,6 @@
 footer {
     border-top: 1px solid var(--border);
-    padding: 1.4rem 0 2.2rem;
+    padding: 1.4rem 2rem;
     color: var(--muted);
 
     .footer-flex {
@@ -8,12 +8,16 @@ footer {
         gap: 1rem;
         flex-wrap: wrap;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-evenly;
     }
 
     .footer-nav {
         display: flex;
         gap: .8rem;
         flex-wrap: wrap;
+
+        a {
+            text-decoration: none;
+        }
     }
 }
