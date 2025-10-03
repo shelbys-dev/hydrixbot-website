@@ -1,0 +1,25 @@
+// Color variables
+:root {
+    --index-bg: #0b0d12;
+    --panel: #11151f;
+    --bg: #0b1220;
+    --card: #0f172a;
+    --text: #e5e7eb;
+    --muted: #9ca3af;
+    --accent: #60a5fa;
+    --primary: #7c5cff;
+    /* accent violet */
+    --primary-600: #6a48ff;
+    --ring: rgba(124, 92, 255, .35);
+    --ok: #34d399;
+    --warn: #f59e0b;
+    --danger: #ef4444;
+    --border: #202534;
+}
+
+// Gradients, shadows, etc
+:root {
+    --grad-1: radial-gradient(1200px 600px at 10% -10%, rgba(124, 92, 255, .18), transparent 60%);
+    --grad-2: radial-gradient(1200px 600px at 110% 10%, rgba(38, 208, 124, .12), transparent 60%);
+    --shadow-lg: 0 20px 40px rgba(0, 0, 0, .35), 0 2px 8px rgba(0, 0, 0, .35);
+}

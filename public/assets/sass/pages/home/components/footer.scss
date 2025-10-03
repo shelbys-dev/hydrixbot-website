@@ -1,0 +1,19 @@
+footer {
+    border-top: 1px solid var(--border);
+    padding: 1.4rem 0 2.2rem;
+    color: var(--muted);
+
+    .footer-flex {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .footer-nav {
+        display: flex;
+        gap: .8rem;
+        flex-wrap: wrap;
+    }
+}

@@ -1,0 +1,11 @@
+@media (min-width:880px) {
+    .grid.cols-2 {
+        grid-template-columns: 1.1fr .9fr
+    }
+}
+
+@media (min-width:820px) {
+    .features-grid {
+        grid-template-columns: repeat(3, 1fr)
+    }
+}

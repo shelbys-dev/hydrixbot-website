@@ -1,0 +1,17 @@
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: .25rem 0 1rem
+}
+
+.table th,
+.table td {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: .55rem .6rem;
+    vertical-align: top;
+    text-align: left
+}
+
+.table th {
+    background: rgba(255, 255, 255, .04)
+}

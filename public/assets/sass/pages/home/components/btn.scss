@@ -1,0 +1,31 @@
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .72rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: linear-gradient(180deg, color-mix(in oklab, var(--panel) 80%, transparent), var(--panel));
+    box-shadow: 0 1px 0 rgba(255, 255, 255, .05) inset;
+    transition: .2s ease;
+    font-weight: 600;
+
+    &:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, .35)
+    }
+
+    &.primary {
+        background: linear-gradient(180deg, var(--primary), var(--primary-600));
+        border-color: transparent
+    }
+
+    &.ghost {
+        background: transparent
+    }
+
+    &.small {
+        padding: .55rem .8rem;
+        font-weight: 600
+    }
+}
