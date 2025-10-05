@@ -142,6 +142,59 @@ aside {
   align-self: start;
   height: fit-content;
 }
+aside .search-box {
+  position: relative;
+}
+aside .search-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: white;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid white;
+  outline: none;
+  background: transparent;
+}
+aside .search-box input:focus ~ label, aside .search-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: var(--color-primary);
+  font-size: 12px;
+}
+aside .search-box input .form-control:focus {
+  border-color: transparent !important;
+}
+aside .search-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: white;
+  pointer-events: none;
+  transition: 0.5s;
+}
+aside .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.72rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: linear-gradient(180deg, color-mix(in oklab, var(--panel) 80%, transparent), var(--panel));
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05) inset;
+  transition: 0.2s ease;
+  font-weight: 600;
+}
+aside .btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+aside .btn.primary {
+  background: linear-gradient(180deg, var(--primary), var(--primary-600));
+  border-color: transparent;
+}
 
 .nav {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.02));

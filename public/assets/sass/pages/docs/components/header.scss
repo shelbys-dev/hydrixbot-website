@@ -11,6 +11,72 @@ aside {
     top: 1rem;
     align-self: start;
     height: fit-content;
+
+    .search-box {
+        position: relative;
+
+        input {
+            width: 100%;
+            padding: 10px 0;
+            font-size: 16px;
+            color: white;
+            margin-bottom: 30px;
+            border: none;
+            border-bottom: 1px solid white;
+            outline: none;
+            background: transparent;
+
+            &:focus~,
+            &:valid~ {
+                label {
+                    top: -20px;
+                    left: 0;
+                    color: var(--color-primary);
+                    font-size: 12px;
+                }
+            }
+
+            .form-control {
+                &:focus {
+                    border-color: transparent !important;
+                }
+            }
+        }
+
+        label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 10px 0;
+            font-size: 16px;
+            color: white;
+            pointer-events: none;
+            transition: .5s;
+        }
+    }
+
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: .5rem;
+        padding: .72rem 1rem;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        background: linear-gradient(180deg, color-mix(in oklab, var(--panel) 80%, transparent), var(--panel));
+        box-shadow: 0 1px 0 rgba(255, 255, 255, .05) inset;
+        transition: .2s ease;
+        font-weight: 600;
+
+        &:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, .35)
+        }
+
+        &.primary {
+            background: linear-gradient(180deg, var(--primary), var(--primary-600));
+            border-color: transparent
+        }
+    }
 }
 
 .nav {
