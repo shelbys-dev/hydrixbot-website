@@ -28,9 +28,9 @@
     <link rel="stylesheet" href="<?php echo e(asset('assets/css/footer.css')); ?>">
     <?php if(Route::is('home')): ?>
         <link rel="stylesheet" href="<?php echo e(asset('assets/css/index.css')); ?>">
-    <?php elseif(Route::is('docs', 'docs.show')): ?>
+    <?php elseif(Route::is('docs', 'docs.show', 'docs.search')): ?>
         <link rel="stylesheet" href="<?php echo e(asset('assets/css/docs.css')); ?>">
-    <?php elseif(Route::is('tos') || Route::is('privacy')): ?>
+    <?php elseif(Route::is('tos') || Route::is('privacy') || Route::is('legal.history')): ?>
         <link rel="stylesheet" href="<?php echo e(asset('assets/css/terms.css')); ?>">
     <?php endif; ?>
 
