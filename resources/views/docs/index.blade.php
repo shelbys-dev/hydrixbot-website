@@ -4,8 +4,11 @@
 @section('content')
     <div class="container">
         <h1>Documentation</h1>
+
         <div class="layout">
             <aside>
+                @include('docs.components.search-form')
+                
                 <nav aria-label="Sommaire" class="nav">
                     @foreach ($docs as $doc)
                         <a href="{{ route('docs.show', $doc->slug) }}" class="text-blue-600 hover:underline">

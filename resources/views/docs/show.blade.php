@@ -5,6 +5,8 @@
     <div class="container">
         <div class="layout">
             <aside>
+                @include('docs.components.search-form')
+                
                 <nav aria-label="Sommaire" class="nav">
                     @foreach ($docs as $d)
                         <a href="{{ route('docs.show', $d->slug) }}"
