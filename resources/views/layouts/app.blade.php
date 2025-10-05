@@ -28,9 +28,9 @@
     <link rel="stylesheet" href="{{ asset('assets/css/footer.css') }}">
     @if (Route::is('home'))
         <link rel="stylesheet" href="{{ asset('assets/css/index.css') }}">
-    @elseif (Route::is('docs', 'docs.show'))
+    @elseif (Route::is('docs', 'docs.show', 'docs.search'))
         <link rel="stylesheet" href="{{ asset('assets/css/docs.css') }}">
-    @elseif (Route::is('tos') || Route::is('privacy'))
+    @elseif (Route::is('tos') || Route::is('privacy') || Route::is('legal.history'))
         <link rel="stylesheet" href="{{ asset('assets/css/terms.css') }}">
     @endif
 
