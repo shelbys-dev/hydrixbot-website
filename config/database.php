@@ -63,6 +63,25 @@ return [
             ]) : [],
         ],
 
+        'mysql_bot' => [
+            'driver' => 'mysql',
+            'host' => env('BOT_DB_HOST', '127.0.0.1'),
+            'port' => env('BOT_DB_PORT', '3306'),
+            'database' => env('BOT_DB_DATABASE', 'forge'),
+            'username' => env('BOT_DB_USERNAME', 'forge'),
+            'password' => env('BOT_DB_PASSWORD', ''),
+            'unix_socket' => env('BOT_DB_SOCKET', ''),
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
+            'prefix' => env('BOT_DB_PREFIX', ''),
+            'prefix_indexes' => true,
+            'strict' => true,
+            'engine' => null,
+            'options' => extension_loaded('pdo_mysql') ? array_filter([
+                PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
+            ]) : [],
+        ],
+
         'mariadb' => [
             'driver' => 'mariadb',
             'url' => env('DB_URL'),
@@ -148,7 +167,7 @@ return [
 
         'options' => [
             'cluster' => env('REDIS_CLUSTER', 'redis'),
-            'prefix' => env('REDIS_PREFIX', Str::slug((string) env('APP_NAME', 'laravel')).'-database-'),
+            'prefix' => env('REDIS_PREFIX', Str::slug((string) env('APP_NAME', 'laravel')) . '-database-'),
             'persistent' => env('REDIS_PERSISTENT', false),
         ],
 
