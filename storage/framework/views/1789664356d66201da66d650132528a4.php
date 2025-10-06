@@ -7,7 +7,20 @@
     <!-- HERO -->
     <section class="hero container-g grid cols-2" aria-labelledby="hero-title">
         <div>
-            <span class="pill" aria-hidden="true">Nouvelle version</span>
+            <span class="pill" aria-hidden="true" id="members-count">Chargement...</span>
+
+            <script>
+                fetch("/bot-stats")
+                    .then(res => res.json())
+                    .then(data => {
+                        document.getElementById("members-count").textContent =
+                            `${data.members.toLocaleString('fr-FR')} membres gérés 🤖`;
+                    })
+                    .catch(() => {
+                        document.getElementById("members-count").textContent = "—";
+                    });
+            </script>
+
             <h1 id="hero-title">Le bot Discord simple, utile et sécurisé.</h1>
             <p class="lead">Modération, annonces automatiques, rôles, salons vocaux éphémères et plus encore. Conçu pour
                 une
@@ -108,7 +121,8 @@
         <details>
             <summary>Comment supprimer mes données ?</summary>
             <p>Vous pouvez retirer le bot à tout moment. Des procédures dédiées sont détaillées dans les <a
-                    href="<?php echo e(route('tos')); ?>">Conditions</a> et la <a href="<?php echo e(route('privacy')); ?>">Confidentialité</a>.</p>
+                    href="<?php echo e(route('tos')); ?>">Conditions</a> et la <a href="<?php echo e(route('privacy')); ?>">Confidentialité</a>.
+            </p>
         </details>
     </section>
 <?php $__env->stopSection(); ?>
