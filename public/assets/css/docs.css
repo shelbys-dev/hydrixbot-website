@@ -1,27 +1,3 @@
-:root {
-  --index-bg: #0b0d12;
-  --panel: #11151f;
-  --bg: #0b1220;
-  --card: #0f172a;
-  --text: #e5e7eb;
-  --muted: #9ca3af;
-  --accent: #60a5fa;
-  --primary: #7c5cff;
-  /* accent violet */
-  --primary-600: #6a48ff;
-  --ring: rgba(124, 92, 255, .35);
-  --ok: #34d399;
-  --warn: #f59e0b;
-  --danger: #ef4444;
-  --border: #202534;
-}
-
-:root {
-  --grad-1: radial-gradient(1200px 600px at 10% -10%, rgba(124, 92, 255, .18), transparent 60%);
-  --grad-2: radial-gradient(1200px 600px at 110% 10%, rgba(38, 208, 124, .12), transparent 60%);
-  --shadow-lg: 0 20px 40px rgba(0, 0, 0, .35), 0 2px 8px rgba(0, 0, 0, .35);
-}
-
 * {
   box-sizing: border-box;
 }
@@ -100,42 +76,6 @@ html {
   scroll-behavior: smooth;
 }
 
-h1 {
-  font-size: 1.9rem;
-  margin: 0 0 0.25rem;
-}
-
-h2 {
-  font-size: 1.25rem;
-  margin: 1.5rem 0 0.5rem;
-}
-
-h3 {
-  font-size: 1.05rem;
-  margin: 1.25rem 0 0.35rem;
-}
-
-p {
-  margin: 0.5rem 0;
-}
-
-small,
-.muted {
-  color: var(--muted);
-}
-
-a {
-  color: var(--accent);
-}
-
-.header {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 1rem;
-  margin-bottom: 0.5rem;
-}
-
 aside {
   position: sticky;
   top: 1rem;
@@ -195,8 +135,7 @@ aside .btn.primary {
   background: linear-gradient(180deg, var(--primary), var(--primary-600));
   border-color: transparent;
 }
-
-.nav {
+aside .nav {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.02));
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 18px;
@@ -204,16 +143,14 @@ aside .btn.primary {
   -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
 }
-
-.nav h3 {
+aside .nav h3 {
   margin: 0.25rem 0.5rem 0.25rem;
   font-size: 0.9rem;
   color: var(--muted);
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
-
-.nav a {
+aside .nav a {
   display: block;
   padding: 0.5rem 0.6rem;
   border-radius: 12px;
@@ -221,25 +158,14 @@ aside .btn.primary {
   color: var(--text);
   border: 1px solid transparent;
 }
-
-.nav a:hover {
+aside .nav a:hover {
   background: rgba(255, 255, 255, 0.04);
   border-color: rgba(255, 255, 255, 0.08);
 }
-
-.nav a.active {
+aside .nav a.active {
   background: rgba(96, 165, 250, 0.15);
   border-color: rgba(96, 165, 250, 0.5);
   color: #eaf3ff;
-}
-
-.footer {
-  margin-top: 1.25rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem 1rem;
-  align-items: center;
-  justify-content: space-between;
 }
 
 .card {

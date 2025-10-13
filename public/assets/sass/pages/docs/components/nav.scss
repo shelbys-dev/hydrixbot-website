@@ -1,11 +1,3 @@
-.header {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 1rem;
-    margin-bottom: .5rem
-}
-
 aside {
     position: sticky;
     top: 1rem;
@@ -77,41 +69,41 @@ aside {
             border-color: transparent
         }
     }
-}
 
-.nav {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.02));
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 18px;
-    padding: 0.75rem;
-    -webkit-backdrop-filter: blur(6px);
-    backdrop-filter: blur(6px);
-}
+    .nav {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.02));
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 18px;
+        padding: 0.75rem;
+        -webkit-backdrop-filter: blur(6px);
+        backdrop-filter: blur(6px);
 
-.nav h3 {
-    margin: .25rem .5rem .25rem;
-    font-size: .9rem;
-    color: var(--muted);
-    letter-spacing: .04em;
-    text-transform: uppercase;
-}
+        h3 {
+            margin: .25rem .5rem .25rem;
+            font-size: .9rem;
+            color: var(--muted);
+            letter-spacing: .04em;
+            text-transform: uppercase;
+        }
 
-.nav a {
-    display: block;
-    padding: .5rem .6rem;
-    border-radius: 12px;
-    text-decoration: none;
-    color: var(--text);
-    border: 1px solid transparent;
-}
+        a {
+            display: block;
+            padding: .5rem .6rem;
+            border-radius: 12px;
+            text-decoration: none;
+            color: var(--text);
+            border: 1px solid transparent;
 
-.nav a:hover {
-    background: rgba(255, 255, 255, .04);
-    border-color: rgba(255, 255, 255, .08)
-}
+            &:hover {
+                background: rgba(255, 255, 255, .04);
+                border-color: rgba(255, 255, 255, .08)
+            }
 
-.nav a.active {
-    background: rgba(96, 165, 250, .15);
-    border-color: rgba(96, 165, 250, .5);
-    color: #eaf3ff
+            &.active {
+                background: rgba(96, 165, 250, .15);
+                border-color: rgba(96, 165, 250, .5);
+                color: #eaf3ff
+            }
+        }
+    }
 }

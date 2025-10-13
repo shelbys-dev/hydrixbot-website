@@ -23,11 +23,9 @@
 
     <link rel="manifest" href="/manifest.json">
 
-    <link rel="stylesheet" href="<?php echo e(asset('assets/css/nav.css')); ?>">
-    <link rel="stylesheet" href="<?php echo e(asset('assets/css/cookie.css')); ?>">
-    <link rel="stylesheet" href="<?php echo e(asset('assets/css/footer.css')); ?>">
+    <link rel="stylesheet" href="<?php echo e(asset('assets/css/index.css')); ?>">
     <?php if(Route::is('home')): ?>
-        <link rel="stylesheet" href="<?php echo e(asset('assets/css/index.css')); ?>">
+        <link rel="stylesheet" href="<?php echo e(asset('assets/css/home.css')); ?>">
     <?php elseif(Route::is('docs', 'docs.show', 'docs.search')): ?>
         <link rel="stylesheet" href="<?php echo e(asset('assets/css/docs.css')); ?>">
     <?php elseif(Route::is('tos') || Route::is('privacy') || Route::is('legal.history')): ?>

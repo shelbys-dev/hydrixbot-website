@@ -1,0 +1,51 @@
+h1 {
+    font-size: 1.9rem;
+    letter-spacing: 0.2px;
+    margin: 0 0 0.75rem;
+}
+
+h2 {
+    font-size: 1.25rem;
+    margin: 1.5rem 0 0.5rem;
+    width: fit-content;
+
+    &:after {
+        content: "";
+        display: block;
+        width: 20%;
+        height: 2px;
+        background: linear-gradient(180deg, var(--primary), var(--primary-600));
+        border-radius: 12px;
+        margin: 0.6rem 0 0;
+        transition: width .3s linear;
+    }
+
+    &:hover {
+        &:after {
+            width: 100%
+        }
+    }
+}
+
+h3 {
+    font-size: 1.05rem;
+    margin: 1.25rem 0 0.35rem;
+}
+
+p {
+    margin: 0.5rem 0
+}
+
+small,
+.muted {
+    color: var(--muted)
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none
+}
+
+a:hover {
+    text-decoration: underline
+}

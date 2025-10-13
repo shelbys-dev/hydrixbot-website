@@ -1,11 +1,13 @@
 header {
     position: sticky;
-    top: 0;
+    top: 10px;
     -webkit-backdrop-filter: saturate(140%) blur(8px);
     backdrop-filter: saturate(140%) blur(8px);
-    background: color-mix(in oklab, var(--bg) 80%, transparent);
-    border-bottom: 1px solid var(--border);
+    border: 1px solid var(--border);
     z-index: 50;
+    width: calc(100% - 20vw);
+    margin: 0 auto;
+    border-radius: 20px;
 
     .nav {
         position: relative;
