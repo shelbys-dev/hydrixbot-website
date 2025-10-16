@@ -158,6 +158,13 @@ header .nav .nav-toggle[aria-expanded=true] {
   outline: 2px solid var(--ring);
 }
 @media (max-width: 920px) {
+  header {
+    position: fixed;
+    top: unset;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
   header .nav .navlinks {
     display: none;
   }
@@ -169,7 +176,7 @@ header .nav .nav-toggle[aria-expanded=true] {
   header .nav.open .navlinks {
     display: flex;
     position: absolute;
-    top: 100%;
+    bottom: 70px;
     right: 0;
     left: 0;
     margin: 0;
