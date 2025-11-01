@@ -48,7 +48,7 @@
     <footer>
         <div class="footer-flex">
             <small>© <?php echo e(date('Y')); ?> ShelbyDev — Hydrix Bot. Tous droits réservés.</small>
-            <nav aria-label="Liens légaux" class="footer-nav">
+            <nav aria-label="Liens légaux">
                 <a href="<?php echo e(route('tos')); ?>" class="muted">Conditions d'utilisation</a>
                 <a href="<?php echo e(route('privacy')); ?>" class="muted">Politique de confidentialité</a>
                 <a href="#" class="muted">Contact</a>

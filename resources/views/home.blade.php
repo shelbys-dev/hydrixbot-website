@@ -27,7 +27,7 @@
                 configuration <em>SQL-first</em> et une transparence totale (ToS & Privacy dédiées).</p>
             <div class="hero-cta">
                 <a class="btn primary" href="/invite" rel="nofollow">🚀 Inviter Hydrix Bot</a>
-                <a class="btn" href="{{ route('docs') }}">📚 Documentation</a>
+                <a class="btn ghost" href="{{ route('docs') }}">📚 Documentation</a>
                 <a class="btn ghost" href="{{ route('tos') }}">Conditions d'utilisation</a>
             </div>
             <div class="chips" role="list" aria-label="Points clés">
@@ -44,7 +44,7 @@
         <div class="panel hero-card" aria-label="Aperçu du bot">
             <div>
                 <b>Exemple de commande</b>
-                <pre class="code" aria-label="Code exemple"><code>/_config automessage 
+                <pre class="code" aria-label="Code exemple"><code>/config automessage 
   channel: #annonces
   message: "Bienvenue sur le serveur !"
   interval: 3600s</code></pre>
@@ -61,6 +61,7 @@
     <!-- FEATURES -->
     <section id="features" class="features container-g">
         <h2>Fonctionnalités clés</h2>
+
         <div class="features-grid">
             <article class="feat" aria-labelledby="f1">
                 <h3 id="f1">Modération assistée</h3>
@@ -84,7 +85,8 @@
             </article>
             <article class="feat" aria-labelledby="f6">
                 <h3 id="f6">Confidentialité</h3>
-                <p>Politique claire, aucune donnée superflue. Voir <a href="{{ route('privacy') }}">Confidentialité</a>.</p>
+                <p>Politique claire, aucune donnée superflue. Voir <a href="{{ route('privacy') }}">Confidentialité</a>.
+                </p>
             </article>
         </div>
     </section>
@@ -93,36 +95,37 @@
     <section id="how" class="how container-g">
         <h2>Installer le bot en 3 étapes</h2>
         <div class="steps">
-            <div class="step"><b>1. Invitez le bot</b>
+            <div class="step"><b>1. <br> Invitez le bot</b>
                 <p>Utilisez le lien d'invitation avec les scopes requis (bot & applications.commands).</p>
             </div>
-            <div class="step"><b>2. Configurez</b>
-                <p>Ouvrez <code>/config</code> pour définir les salons (logs, annonces), les rôles et l'autorole.</p>
+            <div class="step"><b>2. <br> Configurez</b>
+                <p>Ouvrez <span class="code">/config</span> pour définir les salons (logs, annonces), les rôles et
+                    l'autorole.</p>
             </div>
-            <div class="step"><b>3. Personnalisez</b>
-                <p>Ajoutez vos liens via <code>/config liens</code>, et planifiez vos messages automatiques.</p>
+            <div class="step"><b>3. <br> Personnalisez</b>
+                <p>Ajoutez vos liens via <span class="code">/config liens</span>, et planifiez vos messages automatiques.
+                </p>
             </div>
         </div>
     </section>
 
     <!-- FAQ -->
-    <section id="faq" class="faq container-g">
-        <h2>FAQ</h2>
-        <details>
-            <summary>Collectez-vous des données personnelles ?</summary>
-            <p>Uniquement le strict nécessaire au fonctionnement du bot (IDs Discord, paramètres de serveur). Consultez la
-                <a href="{{ route('privacy') }}">Politique de Confidentialité</a>.
-            </p>
-        </details>
-        <details>
-            <summary>Le bot est-il open‑source ?</summary>
-            <p>Oui à partir de <a href="https://git.lehub.tf/ShelbyDev.fr/HydrixBot.git">ce dépôt Git.</a></p>
-        </details>
-        <details>
-            <summary>Comment supprimer mes données ?</summary>
-            <p>Vous pouvez retirer le bot à tout moment. Des procédures dédiées sont détaillées dans les <a
-                    href="{{ route('tos') }}">Conditions</a> et la <a href="{{ route('privacy') }}">Confidentialité</a>.
-            </p>
-        </details>
+    <section id="faqs" class="faq container-g">
+        <h2>Questions fréquentes</h2>
+
+        <div id="faq">
+            @forelse($faqs as $faq)
+                <details>
+                    <summary>{{ $faq['question'] }}</summary>
+                    <p>
+                        {{ \Illuminate\Support\Str::limit(strip_tags(\Illuminate\Support\Str::of($faq['answer_md'])->markdown()->toHtmlString()), 180) }}
+                    </p>
+                </details>
+            @empty
+                <p>Aucune question à la une pour le moment.</p>
+            @endforelse
+
+            <a class="btn primary" href="{{ route('faq.index') }}">Voir toute la FAQ</a>
+        </div>
     </section>
 @endsection
