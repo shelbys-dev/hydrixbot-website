@@ -1,8 +1,11 @@
-@import "variables";
+@import "styles/variables";
 
-@import "texts";
-@import "cookie";
+@import "styles/style";
+@import "styles/texts";
 
+@import "components/cookie";
+@import "components/scrollbar";
 @import "components/nav";
 @import "components/btn";
+@import "components/faq";
 @import "components/footer";

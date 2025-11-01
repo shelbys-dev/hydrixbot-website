@@ -5,8 +5,10 @@ use App\Http\Controllers\DocController;
 use App\Http\Controllers\LegalPageController;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Http;
+use App\Http\Controllers\FaqController;
+use App\Http\Controllers\HomeController;
 
-Route::view('/', 'home')->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 // Documentation du bot
 Route::get('/docs', [DocController::class, 'index'])->name('docs');
@@ -16,6 +18,9 @@ Route::get('/docs/{slug}', [DocController::class, 'show'])->name('docs.show');
 Route::get('/tos', [LegalPageController::class, 'show'])->defaults('type', 'tos')->name('tos');
 Route::get('/privacy', [LegalPageController::class, 'show'])->defaults('type', 'privacy')->name('privacy');
 Route::get('/legal/history', [LegalPageController::class, 'history'])->name('legal.history');
+
+// FAQ du bot
+Route::get('/faq', [FaqController::class, 'index'])->name('faq.index');
 
 // Route pour récupérer les stats du bot (nombre de serveurs, membres, etc)
 Route::get('/bot-stats', function () {

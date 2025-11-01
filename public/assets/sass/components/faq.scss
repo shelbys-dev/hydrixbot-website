@@ -1,0 +1,32 @@
+#faqs {
+    padding: 1.8rem 0 2.4rem;
+
+    #faq {
+        display: grid;
+        gap: 1rem;
+
+        details {
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1rem;
+            background: var(--card);
+
+            +details {
+                margin-top: .8rem;
+
+                &:last-child {
+                    margin-bottom: .6rem
+                }
+            }
+
+            summary {
+                cursor: pointer;
+                font-weight: 700;
+
+                &:-webkit-details-marker {
+                    display: none
+                }
+            }
+        }
+    }
+}
