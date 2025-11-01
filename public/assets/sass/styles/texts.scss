@@ -6,24 +6,20 @@ h1 {
 
 h2 {
     font-size: 1.25rem;
-    margin: 1.5rem 0 0.5rem;
-    width: fit-content;
+    margin: 0 0 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     &:after {
         content: "";
-        display: block;
-        width: 20%;
+        display: inline-block;
+        width: 4rem;
         height: 2px;
         background: linear-gradient(180deg, var(--primary), var(--primary-600));
         border-radius: 12px;
         margin: 0.6rem 0 0;
         transition: width .3s linear;
-    }
-
-    &:hover {
-        &:after {
-            width: 100%
-        }
     }
 }
 
@@ -42,10 +38,14 @@ small,
 }
 
 a {
-    color: var(--accent);
     text-decoration: none
 }
 
 a:hover {
-    text-decoration: underline
+    color: var(--primary);
+}
+
+::selection {
+    background: var(--primary);
+    color: var(--index-bg);
 }

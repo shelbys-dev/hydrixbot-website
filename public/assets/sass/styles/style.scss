@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box
+}
+
+html,
+body {
+    height: 100%;
+    scroll-snap-type: y mandatory;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Ubuntu, "Helvetica Neue", Arial, sans-serif;
+    color: var(--text);
+    background: var(--bg) no-repeat center center fixed;
+    background-image: var(--grad-1), var(--grad-2);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+section {
+    min-height: 500px;
+    scroll-snap-align: center;
+}
+
+a {
+    color: inherit;
+    text-decoration: none
+}
+
+.container-g {
+    width: min(1100px, 92%);
+    margin-inline: auto
+}
+
+.container {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem;
+}

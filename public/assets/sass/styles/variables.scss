@@ -23,3 +23,8 @@
     --grad-2: radial-gradient(1200px 600px at 110% 10%, rgba(38, 208, 124, .12), transparent 60%);
     --shadow-lg: 0 20px 40px rgba(124, 92, 255, .35), 0 2px 8px rgba(124, 92, 255, .35);
 }
+
+// Variables for components
+:root {
+    --radius: 1rem;
+}

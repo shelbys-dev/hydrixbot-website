@@ -11,13 +11,27 @@ footer {
         justify-content: space-evenly;
     }
 
-    .footer-nav {
+    nav {
         display: flex;
-        gap: .8rem;
         flex-wrap: wrap;
+        gap: .6rem;
 
         a {
             text-decoration: none;
+
+            &::after {
+                content: "\00B7";
+                margin-left: .6rem;
+                height: 2px;
+            }
+
+            +a {
+                &:last-child {
+                    &::after {
+                        display: none;
+                    }
+                }
+            }
         }
     }
 }
