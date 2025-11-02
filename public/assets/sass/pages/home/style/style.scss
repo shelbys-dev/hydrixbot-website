@@ -7,7 +7,37 @@
 }
 
 .hero {
-    padding: 4.2rem 0 2.2rem
+    position: relative;
+    padding: clamp(3rem, 6vw, 5rem) 0 clamp(1.5rem, 3vw, 3rem);
+    background: linear-gradient(-45deg, rgba(125, 92, 255, 0.4), rgba(105, 72, 255, 0.4), rgba(96, 165, 250, 0.4), rgba(125, 92, 255, 0.4));
+    background-size: 300% 300%;
+    animation: gradientMove 15s ease infinite;
+    border-bottom: 1px solid rgba(140, 145, 255, .12);
+
+    &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -1px;
+        height: 2rem;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(8, 10, 16, .9));
+        pointer-events: none;
+    }
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .grid {
@@ -18,7 +48,11 @@
 h1 {
     font-size: clamp(2rem, 2.2rem + 1.8vw, 4rem);
     line-height: 1.06;
-    margin: 0 0 1rem
+    margin: 0 0 1rem;
+    background: linear-gradient(90deg, #8b5cf6, #6366f1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 p.lead {
@@ -35,10 +69,8 @@ p.lead {
 }
 
 .panel {
-    background: color-mix(in oklab, var(--panel) 92%, transparent);
-    border: 1px solid var(--border);
+    @include glass-panel;
     border-radius: var(--radius);
-    box-shadow: var(--shadow-lg)
 }
 
 .code {
@@ -54,7 +86,7 @@ p.lead {
 .hero-card {
     padding: 1.2rem;
     display: grid;
-    gap: 1rem
+    gap: 1rem;
 }
 
 .hero-cta {
@@ -145,9 +177,8 @@ p.lead {
     gap: .35rem;
     padding: .25rem .6rem;
     border-radius: 999px;
-    background: rgba(124, 92, 255, .14);
     color: #cfc8ff;
-    border: 1px solid rgba(124, 92, 255, .3)
+    @include glass-panel;
 }
 
 .sep {

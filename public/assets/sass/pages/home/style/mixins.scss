@@ -1,0 +1,10 @@
+@mixin glass-panel($bg-color: rgba(17, 20, 30, .55), $border-color: rgba(99,102,241,.65), $blur: 10px) {
+    background: $bg-color;
+    -webkit-backdrop-filter: blur($blur);
+    backdrop-filter: blur($blur);
+    border: 1px solid $border-color;
+    border-radius: var(--radius);
+    box-shadow:
+        0 8px 24px rgba(20, 15, 60, .35),
+        0 0 28px rgba(140, 82, 255, .28);
+}
