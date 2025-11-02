@@ -23,13 +23,13 @@
 
     <link rel="manifest" href="/manifest.json">
 
-    <link rel="stylesheet" href="{{ asset('assets/css/index.css') }}">
+    @vite(['resources/css/app.css'])
     @if (Route::is('home'))
-        <link rel="stylesheet" href="{{ asset('assets/css/home.css') }}">
+        @vite(['resources/css/home.css'])
     @elseif (Route::is('docs', 'docs.show', 'docs.search'))
-        <link rel="stylesheet" href="{{ asset('assets/css/docs.css') }}">
+        @vite(['resources/css/docs.css'])
     @elseif (Route::is('tos') || Route::is('privacy') || Route::is('legal.history'))
-        <link rel="stylesheet" href="{{ asset('assets/css/terms.css') }}">
+        @vite(['resources/css/terms.css'])
     @endif
 
     <link rel="apple-touch-icon" href="{{ asset('assets/img/logo-800.png') }}" />

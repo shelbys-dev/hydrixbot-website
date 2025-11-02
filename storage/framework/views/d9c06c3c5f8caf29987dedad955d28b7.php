@@ -23,13 +23,13 @@
 
     <link rel="manifest" href="/manifest.json">
 
-    <link rel="stylesheet" href="<?php echo e(asset('assets/css/index.css')); ?>">
+    <?php echo app('Illuminate\Foundation\Vite')(['resources/css/app.css']); ?>
     <?php if(Route::is('home')): ?>
-        <link rel="stylesheet" href="<?php echo e(asset('assets/css/home.css')); ?>">
+        <?php echo app('Illuminate\Foundation\Vite')(['resources/css/home.css']); ?>
     <?php elseif(Route::is('docs', 'docs.show', 'docs.search')): ?>
-        <link rel="stylesheet" href="<?php echo e(asset('assets/css/docs.css')); ?>">
+        <?php echo app('Illuminate\Foundation\Vite')(['resources/css/docs.css']); ?>
     <?php elseif(Route::is('tos') || Route::is('privacy') || Route::is('legal.history')): ?>
-        <link rel="stylesheet" href="<?php echo e(asset('assets/css/terms.css')); ?>">
+        <?php echo app('Illuminate\Foundation\Vite')(['resources/css/terms.css']); ?>
     <?php endif; ?>
 
     <link rel="apple-touch-icon" href="<?php echo e(asset('assets/img/logo-800.png')); ?>" />
