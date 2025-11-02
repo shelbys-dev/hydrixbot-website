@@ -91,6 +91,8 @@
             el.classList.remove('show');
         });
     </script>
+
+    <?php echo app('Illuminate\Foundation\Vite')(['resources/js/app.js']); ?>
 </body>
 
 </html>

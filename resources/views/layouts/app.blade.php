@@ -91,6 +91,8 @@
             el.classList.remove('show');
         });
     </script>
+
+    @vite(['resources/js/app.js'])
 </body>
 
 </html>
