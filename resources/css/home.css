@@ -107,23 +107,167 @@ p.lead {
   color: var(--text);
 }
 
-.features {
-  padding: 1.8rem 0 0;
+#features h2 {
+  text-align: center;
+  margin: 2.5rem 0 1.5rem;
 }
-
-.features-grid {
+#features .features-grid {
   display: grid;
-  gap: 4rem;
+  justify-content: center;
+  gap: clamp(1rem, 2.5vw, 1.5rem);
 }
-
-.feat h3 {
+#features .features-grid .feat-card {
+  background: rgba(17, 20, 30, 0.55);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(99, 102, 241, 0.65);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 24px rgba(20, 15, 60, 0.35), 0 0 28px rgba(140, 82, 255, 0.28);
+  padding: clamp(1rem, 2vw, 1.25rem);
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  min-height: 100%;
+  max-width: 350px;
+}
+#features .features-grid .feat-card:hover {
+  transform: translateY(-2px);
+}
+#features .features-grid .feat-card header {
+  display: grid;
+  gap: 0.6rem;
+  position: relative;
+  width: 100%;
+  min-height: 160px;
+  margin: unset;
+  border-radius: 20px;
+  padding: 0.6rem;
+}
+#features .features-grid .feat-card header .feat-icon {
+  margin: 0 auto;
+  font-size: 1.25rem;
+  line-height: 1;
+}
+#features .features-grid .feat-card header h3 {
+  margin: 0 auto;
+}
+#features .features-grid .feat-card header p {
+  text-align: center;
+}
+#features .features-grid .feat-card .discord-preview {
+  height: 100%;
+  cursor: zoom-in;
   margin: 0.2rem 0 0.4rem;
-  font-size: 1.05rem;
 }
-
-.feat p {
-  margin: 0;
-  color: var(--muted);
+#features .features-grid .feat-card .discord-preview .discord-window {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(10, 12, 18, 0.6);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(160, 140, 255, 0.18);
+  box-shadow: 0 12px 28px rgba(20, 15, 60, 0.25), 0 0 22px rgba(140, 82, 255, 0.2);
+  height: 100%;
+}
+#features .features-grid .feat-card .discord-preview .discord-window .dw-titlebar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  font-weight: 600;
+  background: rgba(22, 24, 34, 0.7);
+}
+#features .features-grid .feat-card .discord-preview .discord-window .dw-titlebar .dw-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  display: inline-block;
+  opacity: 0.8;
+}
+#features .features-grid .feat-card .discord-preview .discord-window .dw-titlebar .red {
+  background: #ff5f56;
+}
+#features .features-grid .feat-card .discord-preview .discord-window .dw-titlebar .yellow {
+  background: #ffbd2e;
+}
+#features .features-grid .feat-card .discord-preview .discord-window .dw-titlebar .green {
+  background: #27c93f;
+}
+#features .features-grid .feat-card .discord-preview .discord-window .dw-titlebar strong {
+  margin-left: 0.35rem;
+  font-size: 0.9rem;
+}
+#features .features-grid .feat-card .discord-preview .discord-window .dw-body {
+  padding: 0.75rem;
+}
+#features .features-grid .feat-card .discord-preview .discord-window .dw-body .msg {
+  display: flex;
+  gap: 0.6rem;
+}
+#features .features-grid .feat-card .discord-preview .discord-window .dw-body .msg .avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  background: #5865f2;
+}
+#features .features-grid .feat-card .discord-preview .discord-window .dw-body .msg .bubble {
+  flex: 1;
+}
+#features .features-grid .feat-card .discord-preview .discord-window .dw-body .msg .bubble .meta {
+  font-size: 0.85rem;
+  margin-bottom: 0.35rem;
+}
+#features .features-grid .feat-card .discord-preview .discord-window .dw-body .msg .bubble .embed {
+  display: flex;
+  gap: 0.6rem;
+  position: relative;
+}
+#features .features-grid .feat-card .discord-preview .discord-window .dw-body .msg .bubble .embed .embed-color {
+  width: 4px;
+  border-radius: 2px;
+  background: #8b5cf6;
+}
+#features .features-grid .feat-card .discord-preview .discord-window .dw-body .msg .bubble .embed .embed-main {
+  background: rgba(24, 28, 44, 0.7);
+  border: 1px solid rgba(160, 140, 255, 0.18);
+  border-radius: 8px;
+  padding: 0.6rem 0.75rem;
+}
+#features .features-grid .feat-card .discord-preview .discord-window .dw-body .msg .bubble .embed .embed-title {
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+#features .features-grid .feat-card .discord-preview .discord-window .dw-body .msg .bubble .embed .embed-desc {
+  opacity: 0.9;
+  margin-bottom: 0.4rem;
+}
+#features .features-grid .feat-card .discord-preview .discord-window .dw-body .msg .bubble .embed .embed-fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  width: fit-content;
+}
+#features .features-grid .feat-card .discord-preview .discord-window .dw-body .msg .bubble .embed .embed-fields .field {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  padding: 0.35rem 0.5rem;
+}
+#features .features-grid .feat-card .discord-preview .discord-window .dw-body .msg .bubble .embed .embed-fields span {
+  display: block;
+  opacity: 0.65;
+  font-size: 0.8rem;
+}
+#features .features-grid .feat-card .discord-preview .discord-window .dw-body .msg .hint {
+  margin-top: 0.45rem;
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+#features .features-grid .feat-card .feat-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: auto;
 }
 
 .how {
@@ -131,32 +275,34 @@ p.lead {
 }
 
 .steps {
-  display: grid;
-  gap: 4rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  counter-reset: step;
+  list-style: none;
+  padding: 0;
 }
-
-@media (min-width: 860px) {
-  .steps {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-.feat,
-.step {
-  min-height: 150px;
-  display: inherit;
-  align-items: center;
+.steps li {
+  counter-increment: step;
+  position: relative;
+  padding: 0.5rem 1rem;
+  background: rgba(139, 92, 246, 0.12);
+  border-radius: 999px;
   text-align: center;
-  padding: 1rem;
-  border: 1px dashed var(--border);
-  border-radius: var(--radius);
 }
-
-.step span.code {
-  padding: 0.2rem 0.4rem;
+.steps li:before {
+  content: counter(step);
+  display: inline-block;
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 50%;
+  background: #8b5cf6;
+  color: #fff;
+  text-align: center;
+  margin-right: 0.4rem;
 }
-.step b {
-  display: block;
-  margin-bottom: 0.35rem;
+.steps li p span.code {
+  padding: 0.4rem;
 }
 
 /* Utilities */
