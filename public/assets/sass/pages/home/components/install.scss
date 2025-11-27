@@ -1,0 +1,181 @@
+// SECTION INSTALL
+.install {
+    position: relative;
+
+    &__inner {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+    }
+
+    &__header {
+        text-align: center;
+        max-width: 600px;
+        margin: 0 auto 3.5rem;
+    }
+
+    &__eyebrow {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: rgba(200, 190, 255, 0.8);
+        margin-bottom: 0.5rem;
+    }
+
+    &__title {
+        font-size: clamp(2rem, 3vw, 2.4rem);
+        font-weight: 700;
+        margin-bottom: 0.75rem;
+    }
+
+    &__subtitle {
+        font-size: 0.95rem;
+        color: rgba(220, 225, 255, 0.7);
+    }
+
+    // Timeline
+    &__timeline {
+        position: relative;
+        margin-top: 1rem;
+        padding-top: 0.5rem;
+        counter-reset: step;
+    }
+
+    &__line {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        transform: translateX(-50%);
+        background: linear-gradient(to bottom,
+                rgba(160, 140, 255, 0),
+                rgba(160, 140, 255, 0.7),
+                rgba(160, 140, 255, 0));
+        opacity: 0.8;
+        pointer-events: none;
+    }
+
+    &__step {
+        position: relative;
+        width: 50%;
+        padding: 1.5rem 2rem;
+        margin: 1.75rem 0;
+        @include glass-panel;
+        transition: transform 200ms ease-out, box-shadow 200ms ease-out, border-color 200ms ease-out;
+
+        &:hover {
+            transform: translateY(-4px);
+            box-shadow:
+                0 24px 55px rgba(6, 8, 20, 0.95),
+                0 0 0 1px rgba(180, 160, 255, 0.35);
+        }
+
+        &--left {
+            margin-right: auto;
+            transform-origin: right center;
+            translate: -1.5rem 0; // léger décalage
+        }
+
+        &--right {
+            margin-left: auto;
+            transform-origin: left center;
+            translate: 1.5rem 0;
+        }
+    }
+
+    &__bullet {
+        position: absolute;
+        top: 1.6rem;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 2.2rem;
+        height: 2.2rem;
+        border-radius: 999px;
+        background: radial-gradient(circle at 30% 20%, #ffffff, #c89eff);
+        box-shadow:
+            0 0 0 4px rgba(24, 20, 45, 0.9),
+            0 0 22px rgba(160, 140, 255, 0.9);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 0.9rem;
+        color: #201631;
+        counter-increment: step;
+
+        span {
+            &::before {
+                content: counter(step);
+            }
+
+            transform: translateY(1px);
+        }
+    }
+
+    &__content {
+        position: relative;
+    }
+
+    &__label {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        color: rgba(190, 180, 255, 0.85);
+        margin-bottom: 0.4rem;
+    }
+
+    &__step-title {
+        font-size: 1.1rem;
+        margin-bottom: 0.4rem;
+    }
+
+    &__step-text {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        color: rgba(225, 230, 255, 0.78);
+
+        code {
+            font-size: 0.85em;
+            padding: 0.15rem 0.4rem;
+            border-radius: 999px;
+            background: rgba(10, 12, 25, 0.85);
+            border: 1px solid rgba(160, 140, 255, 0.45);
+        }
+    }
+
+    &__meta {
+        margin-top: 0.9rem;
+    }
+
+    // RESPONSIVE
+    @media (max-width: 900px) {
+        &__line {
+            left: 1.4rem;
+            transform: none;
+        }
+
+        &__step {
+            width: 100%;
+            margin-left: 2rem;
+            translate: 0;
+
+            &--left,
+            &--right {
+                translate: 0;
+            }
+        }
+
+        &__bullet {
+            display: none;
+        }
+    }
+
+    @media (max-width: 600px) {
+        padding: 4rem 0 4.5rem;
+
+        &__step {
+            padding: 1.3rem 1.4rem;
+        }
+    }
+}
