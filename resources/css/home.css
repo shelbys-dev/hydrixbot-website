@@ -427,7 +427,7 @@ p.lead {
 
 .hero {
   position: relative;
-  padding: clamp(3rem, 6vw, 5rem) 0 clamp(1.5rem, 3vw, 3rem);
+  padding: clamp(3rem, 6vw, 6rem) 0 clamp(1.5rem, 3vw, 3rem);
   background: linear-gradient(-45deg, rgba(125, 92, 255, 0.4), rgba(105, 72, 255, 0.4), rgba(96, 165, 250, 0.4), rgba(125, 92, 255, 0.4));
   background-size: 300% 300%;
   animation: gradientMove 15s ease infinite;
