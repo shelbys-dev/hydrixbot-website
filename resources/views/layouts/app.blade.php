@@ -43,7 +43,7 @@
         @include('partials.nav')
     </header>
 
-    <main>@yield('content')</main>
+    <main style="@if (Route::is('home')) @else margin-top:6rem @endif">@yield('content')</main>
 
     <footer>
         @include('partials.footer')
