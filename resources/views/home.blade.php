@@ -48,6 +48,78 @@
         </div>
     </section>
 
+    <!-- INSTALLATION -->
+    <section class="install container-g" id="install">
+        <div class="install__inner" data-i>
+            <div class="install__header" data-fade-up>
+                <p class="install__eyebrow">Installation</p>
+                <h2 class="install__title">Installer Hydrix en 3 étapes</h2>
+                <p class="install__subtitle">
+                    Une configuration guidée, pensée pour tous les serveurs Discord.
+                </p>
+            </div>
+
+            <div class="install__timeline" data-stagger-child>
+                <span class="install__line" aria-hidden="true"></span>
+
+                <!-- Étape 1 -->
+                <article class="install__step install__step--left" data-i>
+                    <div class="install__bullet" data-step="1">
+                        <span></span>
+                    </div>
+                    <div class="install__content">
+                        <p class="install__label">Étape 1</p>
+                        <h3 class="install__step-title">Invitez le bot</h3>
+                        <p class="install__step-text">
+                            Utilisez le lien d’invitation avec les scopes requis
+                            (<strong>bot</strong> &amp; <strong>applications.commands</strong>).
+                        </p>
+                        <div class="install__meta">
+                            <span class="pill">🔗 Invitation sécurisée en 1 clic</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Étape 2 -->
+                <article class="install__step install__step--right" data-i>
+                    <div class="install__bullet" data-step="2">
+                        <span></span>
+                    </div>
+                    <div class="install__content">
+                        <p class="install__label">Étape 2</p>
+                        <h3 class="install__step-title">Configurez votre serveur</h3>
+                        <p class="install__step-text">
+                            Ouvrez <code>/config ui</code> pour définir les salons
+                            (<strong>logs</strong>, <strong>annonces</strong>), les rôles et l’autorole
+                            grâce au panneau interactif.
+                        </p>
+                        <div class="install__meta">
+                            <span class="pill">⚙️ Dashboard intégré dans Discord</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Étape 3 -->
+                <article class="install__step install__step--left" data-i>
+                    <div class="install__bullet" data-step="3">
+                        <span></span>
+                    </div>
+                    <div class="install__content">
+                        <p class="install__label">Étape 3</p>
+                        <h3 class="install__step-title">Personnalisez Hydrix</h3>
+                        <p class="install__step-text">
+                            Ajoutez vos liens via <code>/config liens</code>, planifiez vos
+                            messages automatiques et ajustez les autres modules selon votre communauté.
+                        </p>
+                        <div class="install__meta">
+                            <span class="pill">🎨 Paramètres 100&nbsp;% personnalisables</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
     <!-- FEATURES -->
     <section class="container-g" id="features">
         <h2>Fonctionnalités clés</h2>
@@ -72,7 +144,8 @@
                         <div class="dw-body">
                             <!-- message embed -->
                             <div class="msg">
-                                <img class="avatar" src="{{ asset('assets/img/icon-192.webp') }}" alt="" loading="lazy">
+                                <img class="avatar" src="{{ asset('assets/img/icon-192.webp') }}" alt=""
+                                    loading="lazy">
                                 <div class="bubble">
                                     <div class="meta">Hydrix Bot <span class="muted">aujourd’hui 14:22</span></div>
                                     <div class="embed">
@@ -104,7 +177,8 @@
                 </header>
 
                 <!-- Aperçu (faux Discord) -->
-                <figure class="discord-preview" data-lightbox="/assets/previews/moderation.mp4" title="Aperçu plein écran">
+                <figure class="discord-preview" data-lightbox="/assets/previews/moderation.mp4"
+                    title="Aperçu plein écran">
                     <div class="discord-window">
                         <div class="dw-titlebar">
                             <span class="dw-dot red"></span><span class="dw-dot yellow"></span><span
@@ -114,7 +188,8 @@
                         <div class="dw-body">
                             <!-- message embed -->
                             <div class="msg">
-                                <img class="avatar" src="{{ asset('assets/img/icon-192.webp') }}" alt="" loading="lazy">
+                                <img class="avatar" src="{{ asset('assets/img/icon-192.webp') }}" alt=""
+                                    loading="lazy">
                                 <div class="bubble">
                                     <div class="meta">Hydrix Bot <span class="muted">aujourd’hui 14:22</span></div>
                                     <div class="embed">
@@ -142,7 +217,8 @@
                 </header>
 
                 <!-- Aperçu (faux Discord) -->
-                <figure class="discord-preview" data-lightbox="/assets/previews/moderation.mp4" title="Aperçu plein écran">
+                <figure class="discord-preview" data-lightbox="/assets/previews/moderation.mp4"
+                    title="Aperçu plein écran">
                     <div class="discord-window">
                         <div class="dw-titlebar">
                             <span class="dw-dot red"></span><span class="dw-dot yellow"></span><span
@@ -152,7 +228,8 @@
                         <div class="dw-body">
                             <!-- message embed -->
                             <div class="msg">
-                                <img class="avatar" src="{{ asset('assets/img/icon-192.webp') }}" alt="" loading="lazy">
+                                <img class="avatar" src="{{ asset('assets/img/icon-192.webp') }}" alt=""
+                                    loading="lazy">
                                 <div class="bubble">
                                     <div class="meta">Hydrix Bot <span class="muted">aujourd’hui 14:22</span></div>
                                     <div class="embed">
@@ -190,7 +267,8 @@
                         <div class="dw-body">
                             <!-- message embed -->
                             <div class="msg">
-                                <img class="avatar" src="{{ asset('assets/img/icon-192.webp') }}" alt="" loading="lazy">
+                                <img class="avatar" src="{{ asset('assets/img/icon-192.webp') }}" alt=""
+                                    loading="lazy">
                                 <div class="bubble">
                                     <div class="meta">Hydrix Bot <span class="muted">aujourd’hui 14:22</span></div>
                                     <div class="embed">
@@ -228,7 +306,8 @@
                         <div class="dw-body">
                             <!-- message embed -->
                             <div class="msg">
-                                <img class="avatar" src="{{ asset('assets/img/icon-192.webp') }}" alt="" loading="lazy">
+                                <img class="avatar" src="{{ asset('assets/img/icon-192.webp') }}" alt=""
+                                    loading="lazy">
                                 <div class="bubble">
                                     <div class="meta">Hydrix Bot <span class="muted">aujourd’hui 14:22</span></div>
                                     <div class="embed">
@@ -270,7 +349,8 @@
                         <div class="dw-body">
                             <!-- message embed -->
                             <div class="msg">
-                                <img class="avatar" src="{{ asset('assets/img/icon-192.webp') }}" alt="" loading="lazy">
+                                <img class="avatar" src="{{ asset('assets/img/icon-192.webp') }}" alt=""
+                                    loading="lazy">
                                 <div class="bubble">
                                     <div class="meta">Hydrix Bot <span class="muted">aujourd’hui 14:22</span></div>
                                     <div class="embed">
@@ -293,77 +373,6 @@
                     </div>
                 </figure>
             </article>
-        </div>
-    </section>
-
-    <section class="install container-g" id="install">
-        <div class="install__inner">
-            <div class="install__header" data-fade-up>
-                <p class="install__eyebrow">Installation</p>
-                <h2 class="install__title">Installer Hydrix en 3 étapes</h2>
-                <p class="install__subtitle">
-                    Une configuration guidée, pensée pour tous les serveurs Discord.
-                </p>
-            </div>
-
-            <div class="install__timeline">
-                <span class="install__line" aria-hidden="true"></span>
-
-                <!-- Étape 1 -->
-                <article class="install__step install__step--left" data-fade-up>
-                    <div class="install__bullet" data-step="1">
-                        <span></span>
-                    </div>
-                    <div class="install__content">
-                        <p class="install__label">Étape 1</p>
-                        <h3 class="install__step-title">Invitez le bot</h3>
-                        <p class="install__step-text">
-                            Utilisez le lien d’invitation avec les scopes requis
-                            (<strong>bot</strong> &amp; <strong>applications.commands</strong>).
-                        </p>
-                        <div class="install__meta">
-                            <span class="pill">🔗 Invitation sécurisée en 1 clic</span>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Étape 2 -->
-                <article class="install__step install__step--right" data-fade-up>
-                    <div class="install__bullet" data-step="2">
-                        <span></span>
-                    </div>
-                    <div class="install__content">
-                        <p class="install__label">Étape 2</p>
-                        <h3 class="install__step-title">Configurez votre serveur</h3>
-                        <p class="install__step-text">
-                            Ouvrez <code>/config ui</code> pour définir les salons
-                            (<strong>logs</strong>, <strong>annonces</strong>), les rôles et l’autorole
-                            grâce au panneau interactif.
-                        </p>
-                        <div class="install__meta">
-                            <span class="pill">⚙️ Dashboard intégré dans Discord</span>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Étape 3 -->
-                <article class="install__step install__step--left" data-fade-up>
-                    <div class="install__bullet" data-step="3">
-                        <span></span>
-                    </div>
-                    <div class="install__content">
-                        <p class="install__label">Étape 3</p>
-                        <h3 class="install__step-title">Personnalisez Hydrix</h3>
-                        <p class="install__step-text">
-                            Ajoutez vos liens via <code>/config liens</code>, planifiez vos
-                            messages automatiques et ajustez les autres modules selon votre communauté.
-                        </p>
-                        <div class="install__meta">
-                            <span class="pill">🎨 Paramètres 100&nbsp;% personnalisables</span>
-                        </div>
-                    </div>
-                </article>
-            </div>
         </div>
     </section>
 
