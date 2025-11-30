@@ -166,11 +166,6 @@ p.lead {
   border: 1px solid rgba(99, 102, 241, 0.65);
   border-radius: var(--radius);
   box-shadow: 0 8px 24px rgba(20, 15, 60, 0.35), 0 0 28px rgba(140, 82, 255, 0.28);
-  transition: transform 200ms ease-out, box-shadow 200ms ease-out, border-color 200ms ease-out;
-}
-.install__step:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 24px 55px rgba(6, 8, 20, 0.95), 0 0 0 1px rgba(180, 160, 255, 0.35);
 }
 .install__step--left {
   margin-right: auto;
