@@ -1,5 +1,5 @@
 header {
-    position: sticky;
+    position: fixed;
     top: 10px;
     -webkit-backdrop-filter: saturate(140%) blur(8px);
     backdrop-filter: saturate(140%) blur(8px);
@@ -8,6 +8,8 @@ header {
     width: calc(100% - 20vw);
     margin: 0 auto;
     border-radius: 20px;
+    left: 50%;
+    transform: translateX(-50%);
 
     .nav {
         position: relative;

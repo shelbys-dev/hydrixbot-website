@@ -2,7 +2,7 @@
     <div class="brand">
         <div class="logo" aria-hidden="true"></div>
         <a href="{{ route('home') }}">Hydrix Bot</a>
-        <span class="tag" title="Version">v1.0</span>
+        <span class="pill" title="Version">v1.0</span>
 
         @if (Route::is('home'))
             <nav class="navlinks" aria-label="Navigation principale">
